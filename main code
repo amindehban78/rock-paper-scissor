@@ -1,0 +1,42 @@
+import random as random 
+import time
+user_name = input("enter your name : ") 
+print(f"hello " + user_name + " welcome to the game \n chosse one : \n START \n ABOUT \n EXIT") 
+user_menu_chosse = input().upper() 
+if user_menu_chosse == "START": 
+    print("run game") 
+    for i in range(5): 
+        user_input = input("Choose one from rock, paper or scissors  ") 
+        pos = ["stone", "paper", "scissor"] 
+        result = random.choice(pos) 
+        if user_input == result: 
+            print("equal") 
+            print("player 2 : " ,result) 
+        elif user_input == "stone": 
+            if result == "paper":    
+                print("you win")   
+                print("player 2 : " ,result) 
+            else: 
+                print("you lose") 
+        elif user_input == "paper": 
+            if result == "scissor": 
+                print("you lose") 
+                print("player 2 : " ,result) 
+ 
+        elif user_input == "scissor": 
+            if result == "stone": 
+                print("you win") 
+                print("player 2 : " ,result) 
+ 
+            else: 
+                print("you lose") 
+    else: 
+        print("Invalid input! You must choose rock, paper, or scissors.") 
+     
+elif user_menu_chosse == "ABOUT": 
+    print("i am, Amin and we msde this program with the help of my GF mahdie") 
+# mahdie is my GIRLFRIEND 
+elif user_menu_chosse == "EXIT": 
+    exit = input("Enter any key to exit")
+    print(exit)
+time.sleep(3) 
